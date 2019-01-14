@@ -47,7 +47,8 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* CSS */
+
 * {
     box-sizing: border-box;
 }
@@ -60,50 +61,83 @@ html, body {
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-section {
+.pageContainer {
+    margin: auto;
+	width: 880px;
+}
+
+header {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+	margin: 30px auto;
 }
 
-h1 {
-	font-size: 50pt;
-	text-align: center;
-	margin-top: 25%;
-}
-
-a {
-	color: grey;
-	text-decoration: none;
-}
-
-footer {
-	text-align: center;
-	margin: 20px;
+@media(max-width: 800px) {
+    header {
+        flex-direction: column-reverse;
+    }
 }
 
 nav {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+    justify-content: space-between;
+    align-content: center;
 	width: 600px;
 }
 
-button {
-	height: 25px;
-	width: 150 px;
+@media(max-width: 800px) {
+    .optImg {
+        display: none;
+    }
+}
+
+a {
 	color: grey;
+    text-decoration: none;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.contLand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    
+}
+
+h1 {
+	font-size: 56pt;
+	text-align: center;
+    padding: 50px;
+	height: 379px;
+    width: 379px;
+    border: 1px solid red;
+}
+
+button {
+	height: 30px;
+	width: 250px;
 	background: white;
 	border: 1px solid grey;
-	margin-left: 38%;
 }
+
+
+footer {
+	text-align: center;
+	margin: 20px;
+}
+
 
 
 
@@ -124,14 +158,15 @@ button {
 	margin: 20px 0;
 }
 
-.landLink {
-	padding: 10px;
-	height: 379px;
-	width: 379px;
-}
-
 .toTheLeft {
 	justify-content: left;
 	margin-left: 275px;
 	margin-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+    .boxes {
+    width: 100%;
+    }
+
 }
