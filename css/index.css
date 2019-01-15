@@ -69,6 +69,12 @@ h1, h2, h3, h4, h5 {
 	width: 880px;
 }
 
+@media(max-width: 800px) {
+    .pageContainer {
+        width: 750px;
+    }
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -87,7 +93,17 @@ nav {
 	flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-	width: 600px;
+    width: 600px;
+}
+
+@media(max-width; 800px) {
+    nav {
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    margin: auto;
 }
 
 @media(max-width: 800px) {
@@ -105,14 +121,17 @@ section {
 	display: flex;
 	flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid red;
+}
+
+@media(max-width: 800px) {
+    section {
+    }
 }
 
 .contLand {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
     
 }
 
@@ -122,7 +141,6 @@ h1 {
     padding: 50px;
 	height: 379px;
     width: 379px;
-    border: 1px solid red;
 }
 
 button {
@@ -137,9 +155,6 @@ footer {
 	text-align: center;
 	margin: 20px;
 }
-
-
-
 
 .boxes {
 	display: flex;
@@ -160,7 +175,6 @@ footer {
 
 .toTheLeft {
 	justify-content: left;
-	margin-left: 275px;
 	margin-bottom: 50px;
 }
 
