@@ -71,7 +71,13 @@ h1, h2, h3, h4, h5 {
 
 @media(max-width: 800px) {
     .pageContainer {
-        width: 750px;
+        width: 800px;
+    }
+}
+
+@media(max-width: 500px) {
+    .pageContainer {
+        width: 500px;
     }
 }
 
@@ -83,7 +89,8 @@ header {
 
 @media(max-width: 800px) {
     header {
-        flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		align-items: center;
     }
 }
 
@@ -96,15 +103,22 @@ nav {
     width: 600px;
 }
 
-@media(max-width; 800px) {
+@media(max-width: 500px) {
     nav {
-        justify-content: space-between;
+		flex-direction: column;
     }
 }
 
 .logo {
-    margin: auto;
+    align-items: flex-end;
 }
+
+@media(max-width: 800px) {
+    .logo {
+		margin-bottom: 40px;
+    }
+}
+
 
 @media(max-width: 800px) {
     .optImg {
@@ -117,14 +131,27 @@ a {
     text-decoration: none;
 }
 
-section {
-	display: flex;
-	flex-wrap: wrap;
-    justify-content: center;
+@media(max-width: 500px) {
+    nav a {
+		width: 500px;
+		border-top: 1px solid grey;
+		border-bottom: 1px solid grey;
+		padding: 20px;
+		text-align: center;
+    }
 }
 
-@media(max-width: 800px) {
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 30px;
+}
+
+@media(max-width: 500px) {
     section {
+        flex-direction: column;
     }
 }
 
@@ -132,23 +159,25 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 379px;
+    width: 379px;
     
 }
 
 h1 {
-	font-size: 56pt;
-	text-align: center;
-    padding: 50px;
-	height: 379px;
-    width: 379px;
+	font-size: 54pt;
+    text-align: center;
+    width: 275px;
+    margin: 50px 0 20px 0;
 }
 
 button {
 	height: 30px;
-	width: 250px;
+	width: 175px;
 	background: white;
 	border: 1px solid grey;
 }
+
 
 
 footer {
@@ -168,9 +197,23 @@ footer {
 	margin: 20px 0;
 }
 
+@media (max-width: 500px) {
+    .contHalf {
+    width: 100%;
+    }
+
+}
+
 .contThird {
 	width: 33%;
 	margin: 20px 0;
+}
+
+@media (max-width: 500px) {
+    .contThird {
+    width: 100%;
+    }
+
 }
 
 .toTheLeft {
@@ -183,4 +226,10 @@ footer {
     width: 100%;
     }
 
+}
+
+@media (max-width: 500px) {
+	.middle-img {
+		width: 100%;
+	}
 }
