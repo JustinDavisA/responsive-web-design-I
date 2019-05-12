@@ -47,7 +47,8 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* CSS */
+
 * {
     box-sizing: border-box;
 }
@@ -60,52 +61,129 @@ html, body {
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-section {
+.pageContainer {
+    margin: auto;
+	width: 880px;
+}
+
+@media(max-width: 800px) {
+    .pageContainer {
+        width: 800px;
+    }
+}
+
+@media(max-width: 500px) {
+    .pageContainer {
+        width: 500px;
+    }
+}
+
+header {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+	margin: 30px auto;
 }
 
-h1 {
-	font-size: 50pt;
-	text-align: center;
-	margin-top: 25%;
-}
-
-a {
-	color: grey;
-	text-decoration: none;
-}
-
-footer {
-	text-align: center;
-	margin: 20px;
+@media(max-width: 800px) {
+    header {
+		flex-direction: column-reverse;
+		align-items: center;
+    }
 }
 
 nav {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 600px;
+    justify-content: space-between;
+    align-content: center;
+    width: 600px;
+}
+
+@media(max-width: 500px) {
+    nav {
+		flex-direction: column;
+    }
+}
+
+.logo {
+    align-items: flex-end;
+}
+
+@media(max-width: 800px) {
+    .logo {
+		margin-bottom: 40px;
+    }
+}
+
+
+@media(max-width: 800px) {
+    .optImg {
+        display: none;
+    }
+}
+
+a {
+	color: grey;
+    text-decoration: none;
+}
+
+@media(max-width: 500px) {
+    nav a {
+		width: 500px;
+		border-top: 1px solid grey;
+		border-bottom: 1px solid grey;
+		padding: 20px;
+		text-align: center;
+    }
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 30px;
+}
+
+@media(max-width: 500px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+.contLand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 379px;
+    width: 379px;
+    
+}
+
+h1 {
+	font-size: 54pt;
+    text-align: center;
+    width: 275px;
+    margin: 50px 0 20px 0;
 }
 
 button {
-	height: 25px;
-	width: 150 px;
-	color: grey;
+	height: 30px;
+	width: 175px;
 	background: white;
 	border: 1px solid grey;
-	margin-left: 38%;
 }
 
 
+
+footer {
+	text-align: center;
+	margin: 20px;
+}
 
 .boxes {
 	display: flex;
@@ -119,19 +197,39 @@ button {
 	margin: 20px 0;
 }
 
+@media (max-width: 500px) {
+    .contHalf {
+    width: 100%;
+    }
+
+}
+
 .contThird {
 	width: 33%;
 	margin: 20px 0;
 }
 
-.landLink {
-	padding: 10px;
-	height: 379px;
-	width: 379px;
+@media (max-width: 500px) {
+    .contThird {
+    width: 100%;
+    }
+
 }
 
 .toTheLeft {
 	justify-content: left;
-	margin-left: 275px;
 	margin-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+    .boxes {
+    width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+	.middle-img {
+		width: 100%;
+	}
 }
